@@ -17,8 +17,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Pawson"
-        android:fullBackupContent="">
+        android:theme="@style/Theme.Pawson">
         <activity
             android:name="com.example.androiddevchallenge.PuppyList"
             android:exported="true"
