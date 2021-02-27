@@ -1,12 +1,30 @@
-package io.embry.pawson
+/*
+ * Copyright 2021 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.example.androiddevchallenge
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Card
@@ -22,11 +40,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.androiddevchallenge.data.PuppyData
+import com.example.androiddevchallenge.data.puppyData
+import com.example.androiddevchallenge.ui.theme.PawsonTheme
 import dev.chrisbanes.accompanist.glide.GlideImage
-import io.embry.pawson.data.PuppyData
-import io.embry.pawson.data.puppyData
+import io.embry.pawson.R
 import io.embry.pawson.extensions.capitalCase
-import io.embry.pawson.ui.theme.PawsonTheme
 
 class PuppyList : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,12 +68,12 @@ fun PuppyList(data: List<PuppyData>) {
             .fillMaxWidth()
             .padding(start = 16.dp, end = 16.dp)
     ) {
-        //header
+        // header
         item {
             PuppyHeader()
         }
 
-        //items
+        // items
         items(data.size) { index ->
             PuppyItem(data = data[index])
         }
@@ -82,11 +101,13 @@ fun PuppyItem(data: PuppyData) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(16.dp)
-            .clickable(onClick = {
-                val intent = Intent(context, PuppyDetail::class.java)
-                intent.putExtra(PuppyDetail.PUPPY_NAME, data.name)
-                context.startActivity(intent)
-            })
+            .clickable(
+                onClick = {
+                    val intent = Intent(context, PuppyDetail::class.java)
+                    intent.putExtra(PuppyDetail.PUPPY_NAME, data.name)
+                    context.startActivity(intent)
+                }
+            )
     ) {
         Card(
             modifier = Modifier
@@ -100,7 +121,6 @@ fun PuppyItem(data: PuppyData) {
                 contentScale = ContentScale.Crop,
                 contentDescription = stringResource(R.string.txt_cd_puppy_name)
             )
-
         }
         Column(
             modifier = Modifier

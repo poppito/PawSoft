@@ -17,7 +17,6 @@ package com.example.androiddevchallenge
 
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import io.embry.pawson.PuppyList
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith

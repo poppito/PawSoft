@@ -17,9 +17,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Pawson">
+        android:theme="@style/Theme.Pawson"
+        android:fullBackupContent="">
         <activity
-            android:name=".PuppyList"
+            android:name="com.example.androiddevchallenge.PuppyList"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Pawson.NoActionBar">
@@ -30,7 +31,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PuppyDetail"
+            android:name="com.example.androiddevchallenge.PuppyDetail"
             android:theme="@style/Theme.Pawson.NoActionBar" />
     </application>
 
