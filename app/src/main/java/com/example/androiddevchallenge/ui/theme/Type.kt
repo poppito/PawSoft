@@ -21,7 +21,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import io.embry.pawson.R
+import com.example.androiddevchallenge.R
 
 // Set of Material typography styles to start with
 

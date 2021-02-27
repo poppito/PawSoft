@@ -15,7 +15,8 @@
  */
 package com.example.androiddevchallenge.data
 
-import io.embry.pawson.R
+import com.example.androiddevchallenge.R
+
 
 data class PuppyData(
     val name: String,

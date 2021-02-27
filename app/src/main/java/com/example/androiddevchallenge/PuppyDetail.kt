@@ -41,7 +41,6 @@ import com.example.androiddevchallenge.data.PuppyData
 import com.example.androiddevchallenge.data.puppyData
 import com.example.androiddevchallenge.ui.theme.PawsonTheme
 import dev.chrisbanes.accompanist.glide.GlideImage
-import io.embry.pawson.R
 import io.embry.pawson.extensions.capitalCase
 
 class PuppyDetail : AppCompatActivity() {
