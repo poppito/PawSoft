@@ -17,7 +17,6 @@ package com.example.androiddevchallenge.data
 
 import com.example.androiddevchallenge.R
 
-
 data class PuppyData(
     val name: String,
     val breed: String,
